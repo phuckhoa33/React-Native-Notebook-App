@@ -10,7 +10,7 @@ export const publicScreens = [
     {
         name: "Inbox",
         component: screens.Inbox,
-        layout: layouts.DefaultLayout
+        layout: null
     },
     {
         name: "Search",
@@ -20,6 +20,6 @@ export const publicScreens = [
     {
         name: "Browse",
         component: screens.Browse,
-        layout: layouts.DefaultLayout
+        layout: null
     }
 ]

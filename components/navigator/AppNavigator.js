@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import * as screens from '../../screens';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import {publicScreens} from '../../routes/public-screen';
@@ -48,13 +47,18 @@ export const AppNavigator = ({}) => {
                 })}
             >
                 {publicScreens?.map(screen => {
-                    const Screen = () => {
-                        return (
-                            <screen.layout>
-                                <screen.component/>
-                            </screen.layout>
+                    let Screen = screen.component;
 
-                        )
+                    if(screen.layout !== null) {
+                        Screen = () => {
+                            return (
+                                <screen.layout>
+                                    <screen.component/>
+                                </screen.layout>
+    
+                            )
+                        }
+
                     }
 
                     return <Tab.Screen name={screen.name} component={Screen}/>
