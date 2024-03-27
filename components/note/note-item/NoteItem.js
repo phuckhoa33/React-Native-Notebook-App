@@ -24,6 +24,7 @@ const NoteItem = ({item, completeTask}) => {
                 <Text>{"sssssssssssssssssss"}</Text>
             </View>
 
+
             <View style={styles.itemExtraInformation}>
                 <View style={styles.itemSubTasks}>
                     <Feather name="git-branch" size={16} color="black" /> 
